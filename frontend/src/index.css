@@ -1,0 +1,333 @@
+/* ==========================================================================
+   GOVERNMENT JOB PORTAL - DESIGN SYSTEM (PHASE 02)
+   Official Clean Sovereign Palette with Comprehensive Light & Dark Themes
+   ========================================================================== */
+
+/* Google Fonts: Outfit (Headings) & Inter (Body) & JetBrains Mono (Codes) */
+:root,
+[data-theme="light"] {
+  --font-sans: 'Noto Sans Tamil', 'Noto Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Noto Sans Tamil', 'Outfit', 'Noto Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Theme: LIGHT MODE (Crisp, High-Contrast Official Government Portal) */
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-input: #ffffff;
+  --bg-subtle: #edf2f7;
+
+  --text-primary: #0f172a;      /* Rich dark slate for AAA contrast */
+  --text-secondary: #334155;    /* Clear slate for metadata */
+  --text-muted: #64748b;        /* Subtle secondary text */
+  --text-inverse: #ffffff;
+
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-strong: #94a3b8;
+
+  --color-primary: #0f3d75;     /* Official Sovereign Navy */
+  --color-primary-hover: #0c315e;
+  --color-primary-subtle: #e8f0fe;
+  --color-primary-border: #93b4e6;
+
+  --color-gold: #b45309;        /* Warm Official Amber / Gold */
+  --color-gold-bg: #fef3c7;
+  --color-gold-border: #fcd34d;
+
+  --color-success: #15803d;     /* Verified Emerald */
+  --color-success-bg: #dcfce7;
+  --color-success-border: #86efac;
+
+  --color-warning: #c2410c;     /* Urgent Deadline Amber */
+  --color-warning-bg: #ffedd5;
+  --color-warning-border: #fdba74;
+
+  --color-danger: #b91c1c;      /* Warning / Expired Red */
+  --color-danger-bg: #fee2e2;
+  --color-danger-border: #fca5a5;
+
+  --color-info: #0369a1;        /* Notice Blue */
+  --color-info-bg: #e0f2fe;
+  --color-info-border: #7dd3fc;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 25px -4px rgba(15, 23, 42, 0.1);
+  --shadow-hover: 0 8px 20px rgba(15, 61, 117, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+}
+
+[data-theme="dark"] {
+  /* Theme: DARK MODE (Comfortable, High-Contrast Midnight Slate) */
+  --bg-base: #090e1a;
+  --bg-surface: #0f172a;
+  --bg-surface-elevated: #1e293b;
+  --bg-card: #0f172a;
+  --bg-card-hover: #162238;
+  --bg-input: #111c33;
+  --bg-subtle: #17233d;
+
+  --text-primary: #f8fafc;      /* Pure clean light for contrast */
+  --text-secondary: #cbd5e1;    /* Bright legible slate */
+  --text-muted: #94a3b8;        /* Subtle secondary text */
+  --text-inverse: #090e1a;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.28);
+
+  --color-primary: #2563eb;     /* Clear Royal Blue */
+  --color-primary-hover: #3b82f6;
+  --color-primary-subtle: rgba(37, 99, 235, 0.15);
+  --color-primary-border: rgba(59, 130, 246, 0.4);
+
+  --color-gold: #f59e0b;
+  --color-gold-bg: rgba(245, 158, 11, 0.14);
+  --color-gold-border: rgba(245, 158, 11, 0.35);
+
+  --color-success: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.14);
+  --color-success-border: rgba(16, 185, 129, 0.35);
+
+  --color-warning: #f97316;
+  --color-warning-bg: rgba(249, 115, 22, 0.14);
+  --color-warning-border: rgba(249, 115, 22, 0.35);
+
+  --color-danger: #f43f5e;
+  --color-danger-bg: rgba(244, 63, 94, 0.14);
+  --color-danger-border: rgba(244, 63, 94, 0.35);
+
+  --color-info: #38bdf8;
+  --color-info-bg: rgba(56, 189, 248, 0.14);
+  --color-info-border: rgba(56, 189, 248, 0.35);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.65);
+  --shadow-hover: 0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+/* Base Reset & Box Sizing (Section 10 Specification) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Safe Text Wrapping (Prefers normal whitespace break, wraps on overflow) */
+p, span, h1, h2, h3, h4, h5, h6, a, label, li, td, th {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Navbar Labels & Navigation - MUST NEVER WRAP VERTICALLY (Tamil / English) */
+.gov-navbar a,
+.gov-navbar button,
+.navbar-nav a,
+.navbar-nav button,
+.desktop-nav-links a,
+.desktop-nav-links button,
+.desktop-nav-links span,
+.nav-link,
+.portal-brand .brand-title,
+.top-strip-right,
+.top-strip-right a,
+.lang-segment-btn,
+.theme-toggle-btn,
+.navbar-actions-desktop,
+.navbar-actions-row,
+.navbar-actions-row a,
+.navbar-actions-row button,
+.navbar-actions-row span,
+.navbar-actions-mobile {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  flex-shrink: 0;
+}
+
+.portal-brand .brand-subtext {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: normal;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Layout Wrapper (Sticky Footer Concept per Section 19) */
+.gov-portal-app {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Global Reusable Card Surface */
+.gov-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.gov-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+/* Status Badges */
+.status-badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-border);
+}
+.status-success .badge-dot { background: var(--color-success); }
+
+.status-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+}
+.status-warning .badge-dot { background: var(--color-warning); }
+
+.status-danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger-border);
+}
+.status-danger .badge-dot { background: var(--color-danger); }
+
+.status-info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+  border: 1px solid var(--color-info-border);
+}
+.status-info .badge-dot { background: var(--color-info); }
+
+.status-neutral {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+.status-neutral .badge-dot { background: var(--text-muted); }
+
+/* Common Helper Classes */
+.text-success { color: var(--color-success) !important; }
+.text-warning { color: var(--color-warning) !important; }
+.text-danger { color: var(--color-danger) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}

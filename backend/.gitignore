@@ -1,0 +1,16 @@
+# Backend Specific Git Ignore
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+coverage/
+logs/
+*.log
+uploads/
+uploads/**
+!uploads/**/.gitkeep
+temp/
+tmp/
+*.tmp

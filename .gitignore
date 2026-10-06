@@ -1,0 +1,77 @@
+# ===================================================
+# Government Job Portal - Git Ignore Rules
+# Phase 10 - Production Deployment & Audit
+# ===================================================
+
+# Environment Configuration & Secrets
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.pem
+*.key
+*.cert
+*.crt
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production Build & Distribution
+dist/
+dist-ssr/
+build/
+*.local
+
+# Logs & Debug Output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Test Coverage & Tooling Caches
+coverage/
+.nyc_output/
+.cache/
+.eslintcache
+.parcel-cache/
+.oxlintrc.cache/
+
+# User Uploaded Documents & Sensitive Storage
+# Resumes, candidate photos, application documents, study materials
+uploads/
+backend/uploads/
+backend/uploads/**
+!backend/uploads/**/.gitkeep
+temp/
+tmp/
+*.tmp
+
+# Database Backup Dumps
+backups/
+*.sql
+*.dump
+*.tar.gz
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

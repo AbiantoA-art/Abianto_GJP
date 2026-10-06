@@ -1,0 +1,48 @@
+{
+  "name": "government-job-portal-backend",
+  "version": "1.0.0",
+  "description": "Production-ready backend API for Government Job Portal",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node src/scripts/initDb.js",
+    "seed:admin": "node src/scripts/createAdmin.js",
+    "db:backup": "node src/scripts/backupDb.js",
+    "test:auth": "node src/scripts/testAuth.js",
+    "test:phase04": "node src/scripts/testPhase04.js",
+    "test:phase05": "node src/scripts/testPhase05.js",
+    "test:phase06": "node src/scripts/testPhase06.js",
+    "test:phase07": "node tests/testPhase07.js",
+    "test:phase08": "node tests/testPhase08.js",
+    "test:phase09": "node tests/testPhase09.js",
+    "test:phase10": "node tests/testPhase10.js",
+    "test:group": "node tests/testGroupFilter.js",
+    "test:study-materials": "node tests/testStudyMaterialsGroup.js",
+    "test:all-category": "node tests/testPhase11AllCategorySuite.js",
+    "test": "node tests/testPhase10.js"
+  },
+  "keywords": [
+    "government-job-portal",
+    "express",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^2.4.0",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.10"
+  }
+}
